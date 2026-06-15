@@ -1,0 +1,24 @@
+{
+  "name": "flion-agentic-pipeline",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Sanitized public excerpt of Flion, a multi-agent production pipeline with explicit handoffs, evidence gates, and retrieval support.",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "ai-agents",
+    "agentic-workflows",
+    "multi-agent",
+    "rag",
+    "orchestration",
+    "workflow-automation"
+  ],
+  "author": "Julio Cesar Betoni",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
+

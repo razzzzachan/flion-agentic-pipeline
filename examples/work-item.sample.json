@@ -1,0 +1,19 @@
+{
+  "id": "work_demo_agentic_pipeline",
+  "title": "Ship a safe AI-assisted workflow",
+  "stage": "scope",
+  "evidence": {
+    "scope": {
+      "acceptanceCriteria": {
+        "value": [
+          "The workflow has explicit stages.",
+          "The implementation stage cannot approve itself.",
+          "Release notes include residual risks."
+        ],
+        "actor": "scope",
+        "recordedAt": "2026-06-15T00:00:00.000Z"
+      }
+    }
+  }
+}
+
