@@ -1,0 +1,181 @@
+{
+  "generatedAt": "2026-06-16T02:49:44.971Z",
+  "title": "Flion Data Cloud Agents Demo",
+  "dataset": {
+    "id": "demo_revenue_cloud",
+    "tables": [
+      "accounts",
+      "tool_runs"
+    ]
+  },
+  "finalStage": "release",
+  "architectureBlocks": [
+    {
+      "id": "work-intake",
+      "title": "Work Intake Contract"
+    },
+    {
+      "id": "data-contracts",
+      "title": "Data Contracts"
+    },
+    {
+      "id": "mcp-tool-layer",
+      "title": "MCP Tool Layer"
+    },
+    {
+      "id": "async-data-worker",
+      "title": "Async Data Worker"
+    },
+    {
+      "id": "agent-runtime",
+      "title": "Agent Runtime"
+    },
+    {
+      "id": "evaluation-gates",
+      "title": "Evaluation Gates"
+    },
+    {
+      "id": "operator-console",
+      "title": "Operator Console"
+    },
+    {
+      "id": "observability",
+      "title": "Observability"
+    },
+    {
+      "id": "security-sanitization",
+      "title": "Security And Sanitization"
+    },
+    {
+      "id": "release-handoff",
+      "title": "Release Handoff"
+    }
+  ],
+  "tools": [
+    {
+      "name": "validate_sql",
+      "description": "Validate a read-only SQL query against the public dataset contract."
+    },
+    {
+      "name": "query_dataset",
+      "description": "Run a safe SELECT query against the in-memory public demo dataset."
+    },
+    {
+      "name": "semantic_search",
+      "description": "Search sanitized dataset and architecture notes with lexical retrieval."
+    },
+    {
+      "name": "generate_sample_code",
+      "description": "Generate deterministic sample client code for a safe tool call."
+    },
+    {
+      "name": "record_evidence",
+      "description": "Wrap stage evidence in a deterministic envelope before it enters the pipeline."
+    }
+  ],
+  "verification": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "sql_validated",
+        "passed": true
+      },
+      {
+        "name": "query_returned_rows",
+        "passed": true
+      },
+      {
+        "name": "sample_code_generated",
+        "passed": true
+      },
+      {
+        "name": "worker_succeeded",
+        "passed": true
+      }
+    ]
+  },
+  "releaseNote": {
+    "ready": true,
+    "summary": "Data Cloud Agents demo completed with public data, safe tools, worker validation, and release evidence.",
+    "residualRisks": [
+      "This is an in-memory demo; production deployment would need persistent queues and auth.",
+      "The SQL validator intentionally supports a small safe subset."
+    ]
+  },
+  "stages": [
+    {
+      "stage": "scope",
+      "evidenceKeys": [
+        "acceptanceCriteria"
+      ],
+      "recordedAt": "2026-06-16T02:49:44.968Z"
+    },
+    {
+      "stage": "solution",
+      "evidenceKeys": [
+        "workflowDecision"
+      ],
+      "recordedAt": "2026-06-16T02:49:44.968Z"
+    },
+    {
+      "stage": "architecture",
+      "evidenceKeys": [
+        "technicalContract"
+      ],
+      "recordedAt": "2026-06-16T02:49:44.968Z"
+    },
+    {
+      "stage": "implementation",
+      "evidenceKeys": [
+        "implementationArtifact"
+      ],
+      "recordedAt": "2026-06-16T02:49:44.970Z"
+    },
+    {
+      "stage": "qa",
+      "evidenceKeys": [
+        "verificationResult"
+      ],
+      "recordedAt": "2026-06-16T02:49:44.970Z"
+    },
+    {
+      "stage": "release",
+      "evidenceKeys": [
+        "releaseNote"
+      ],
+      "recordedAt": "2026-06-16T02:49:44.971Z"
+    }
+  ],
+  "implementation": {
+    "sql": "SELECT account, arr_usd, risk FROM accounts LIMIT 3",
+    "queryRows": [
+      {
+        "account": "Atlas Labs",
+        "arr_usd": 126000,
+        "risk": "medium"
+      },
+      {
+        "account": "Northstar Ops",
+        "arr_usd": 84000,
+        "risk": "low"
+      },
+      {
+        "account": "Cobalt Realty",
+        "arr_usd": 42000,
+        "risk": "high"
+      }
+    ],
+    "workerJobs": [
+      {
+        "id": "job_mqg1nhft_fmkk16",
+        "type": "validate_sql",
+        "status": "succeeded",
+        "ok": true
+      }
+    ]
+  },
+  "positioning": {
+    "safe": "Public Google-style engineering sample with typed contracts, MCP-style tools, async worker validation, evaluation gates, and release evidence.",
+    "boundary": "This does not claim direct Google3 access or private Google internal tooling experience."
+  }
+}

@@ -3,14 +3,22 @@
   "version": "0.1.0",
   "private": false,
   "type": "module",
-  "description": "Sanitized public excerpt of Flion, a multi-agent production pipeline with explicit handoffs, evidence gates, and retrieval support.",
+  "description": "Sanitized public excerpt of Flion, a multi-agent production pipeline with explicit handoffs, evidence gates, retrieval support, and a Data Cloud Agents architecture blueprint.",
   "scripts": {
+    "console:build": "node tools/build/write-console-data.mjs",
+    "console:serve": "npm run console:build && node tools/build/serve-console.mjs",
+    "demo:data-cloud": "node examples/run-data-cloud-demo.mjs",
+    "quality": "node tools/quality/check-public-demo.mjs",
+    "validate": "npm test && npm run quality && npm run console:build && npm run demo:data-cloud",
     "test": "node --test"
   },
   "keywords": [
     "ai-agents",
     "agentic-workflows",
     "multi-agent",
+    "mcp",
+    "data-cloud",
+    "monorepo",
     "rag",
     "orchestration",
     "workflow-automation"
@@ -21,4 +29,3 @@
     "node": ">=20"
   }
 }
-

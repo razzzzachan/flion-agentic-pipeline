@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run console:build",
+  "outputDirectory": "apps/console",
+  "cleanUrls": true
+}
