@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T03:21:12.209Z",
+  "generatedAt": "2026-06-16T03:33:09.115Z",
   "title": "Flion Agentic Super App Demo",
   "superApp": {
     "name": "Flion Agentic Super App",
@@ -549,42 +549,42 @@
       "evidenceKeys": [
         "acceptanceCriteria"
       ],
-      "recordedAt": "2026-06-16T03:21:12.205Z"
+      "recordedAt": "2026-06-16T03:33:09.112Z"
     },
     {
       "stage": "solution",
       "evidenceKeys": [
         "workflowDecision"
       ],
-      "recordedAt": "2026-06-16T03:21:12.205Z"
+      "recordedAt": "2026-06-16T03:33:09.112Z"
     },
     {
       "stage": "architecture",
       "evidenceKeys": [
         "technicalContract"
       ],
-      "recordedAt": "2026-06-16T03:21:12.205Z"
+      "recordedAt": "2026-06-16T03:33:09.112Z"
     },
     {
       "stage": "implementation",
       "evidenceKeys": [
         "implementationArtifact"
       ],
-      "recordedAt": "2026-06-16T03:21:12.207Z"
+      "recordedAt": "2026-06-16T03:33:09.114Z"
     },
     {
       "stage": "qa",
       "evidenceKeys": [
         "verificationResult"
       ],
-      "recordedAt": "2026-06-16T03:21:12.208Z"
+      "recordedAt": "2026-06-16T03:33:09.114Z"
     },
     {
       "stage": "release",
       "evidenceKeys": [
         "releaseNote"
       ],
-      "recordedAt": "2026-06-16T03:21:12.208Z"
+      "recordedAt": "2026-06-16T03:33:09.114Z"
     }
   ],
   "implementation": {
@@ -608,7 +608,7 @@
     ],
     "workerJobs": [
       {
-        "id": "job_mqg2rxn3_0zsaf0",
+        "id": "job_mqg37at5_kqbhec",
         "type": "validate_sql",
         "status": "succeeded",
         "ok": true

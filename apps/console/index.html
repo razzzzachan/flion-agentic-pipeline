@@ -116,6 +116,154 @@
 
         <section class="stat-grid reveal" aria-label="Product metrics" data-render="stats"></section>
 
+        <section id="screens" class="product-screens reveal" aria-labelledby="screens-title">
+          <div class="panel-heading row">
+            <div>
+              <p class="eyebrow">Product screens</p>
+              <h2 id="screens-title">The real Flion surfaces, rebuilt as safe public screens</h2>
+            </div>
+            <span class="mini-pill">home / canvas / brain / admin</span>
+          </div>
+
+          <article id="screen-home" class="screen-card home-screen">
+            <div class="screen-copy">
+              <p class="eyebrow">Home workspace</p>
+              <h3>Jarvis chat, context, plugins and execution dock</h3>
+              <p>
+                The main workspace is a command center: sessions on the left, chat and composer in
+                the middle, preview/logs/execution/files/details on the right.
+              </p>
+            </div>
+            <div class="screen-mock workspace-mock" aria-label="Sanitized Flion home screen">
+              <aside>
+                <strong>Flion</strong>
+                <span>New chat</span>
+                <span>Plugins</span>
+                <span>Automations</span>
+                <span>Settings</span>
+              </aside>
+              <main>
+                <div class="screen-pills">
+                  <span>Jarvis Main</span>
+                  <span>Full access</span>
+                  <span>Preview linked</span>
+                </div>
+                <div class="chat-bubble">
+                  <b>Operator</b>
+                  Use @browser, @github and @ui-ux-pro-max to review the release.
+                </div>
+                <div class="composer-line">
+                  <span>@browser</span>
+                  <span>@github</span>
+                  <span>@ui-ux-pro-max</span>
+                  <em>/compact release context</em>
+                </div>
+              </main>
+              <section>
+                <b>Preview</b>
+                <b>Logs</b>
+                <b>Execution</b>
+                <b>Files</b>
+                <b>Details</b>
+              </section>
+            </div>
+          </article>
+
+          <article id="screen-canvas" class="screen-card canvas-screen">
+            <div class="screen-copy">
+              <p class="eyebrow">Flow canvas</p>
+              <h3>Agent handoffs as an operational map</h3>
+              <p>
+                The canvas shows role agents, blocked states, confidence checks and release
+                ownership without forcing the operator to read a raw transcript.
+              </p>
+            </div>
+            <div class="screen-mock canvas-mock" aria-label="Sanitized Flion flow canvas">
+              <div class="canvas-grid"></div>
+              <div class="flow-node node-main">Jarvis Main</div>
+              <div class="flow-node node-scope">Scope</div>
+              <div class="flow-node node-design">Design</div>
+              <div class="flow-node node-arch">Architecture</div>
+              <div class="flow-node node-build">Build</div>
+              <div class="flow-node node-qa">QA Gate</div>
+              <div class="flow-node node-release">Release</div>
+              <svg viewBox="0 0 720 360" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M110 105 C210 35, 310 45, 390 105 S560 160, 610 86" />
+                <path d="M118 248 C220 315, 330 300, 414 244 S540 210, 622 254" />
+                <path d="M610 86 C690 154, 682 236, 622 254" />
+              </svg>
+              <div class="canvas-side">
+                <strong>Confidence</strong>
+                <span>Structural: ready</span>
+                <span>Credential: guarded</span>
+                <span>Release: verified</span>
+              </div>
+            </div>
+          </article>
+
+          <article id="screen-brain" class="screen-card brain-screen">
+            <div class="screen-copy">
+              <p class="eyebrow">Brain / Vault</p>
+              <h3>Memory graph for operational continuity</h3>
+              <p>
+                The vault graph turns notes, decisions and workstreams into retrievable context so
+                agents can resume work without hallucinating from stale memory.
+              </p>
+            </div>
+            <div class="screen-mock brain-mock" aria-label="Sanitized Flion memory graph">
+              <div class="brain-cluster cluster-a"></div>
+              <div class="brain-cluster cluster-b"></div>
+              <div class="brain-cluster cluster-c"></div>
+              <div class="memory-panel">
+                <p class="eyebrow">Memory</p>
+                <strong>163 nodes connected in 7 groups</strong>
+                <span>Executive read: safe context only</span>
+                <span>Signals: notes, releases, decisions</span>
+                <button type="button">Open note</button>
+              </div>
+            </div>
+          </article>
+
+          <article id="screen-admin" class="screen-card admin-screen">
+            <div class="screen-copy">
+              <p class="eyebrow">Admin / Release desk</p>
+              <h3>Decision table for blocked work, QA and deployment</h3>
+              <p>
+                The release surface separates urgent cases, missing evidence, human blockers,
+                agent boost opportunities and production readiness.
+              </p>
+            </div>
+            <div class="screen-mock admin-mock" aria-label="Sanitized Flion admin release screen">
+              <div class="admin-metric">
+                <span>Burning now</span>
+                <strong>0</strong>
+                <small>blocked or missing evidence</small>
+              </div>
+              <div class="admin-metric">
+                <span>Human gate</span>
+                <strong>0</strong>
+                <small>login or external approval</small>
+              </div>
+              <div class="admin-metric">
+                <span>QA / Release</span>
+                <strong>4</strong>
+                <small>ready for dispatch</small>
+              </div>
+              <div class="admin-metric accent">
+                <span>Infra fix</span>
+                <strong>1</strong>
+                <small>known system improvement</small>
+              </div>
+              <div class="release-queue">
+                <b>Release queue</b>
+                <span>QA smoke runner</span>
+                <span>Portfolio publisher</span>
+                <span>Opportunity scanner</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
         <section id="palette" class="split-grid">
           <article class="panel palette-panel reveal">
             <div class="panel-heading row">
