@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "type": "module",
-  "description": "Sanitized public excerpt of Flion, a multi-agent production pipeline with explicit handoffs, evidence gates, retrieval support, and a Data Cloud Agents architecture blueprint.",
+  "description": "Sanitized public excerpt of Flion, an agentic super app with chat-based plugins, skills, role agents, browser/session surfaces, automations, evidence gates, and a runnable Data Cloud Agents module.",
   "scripts": {
     "console:build": "node tools/build/write-console-data.mjs",
     "console:serve": "npm run console:build && node tools/build/serve-console.mjs",

@@ -13,10 +13,13 @@ const evidence = result.finalWorkItem.evidence;
 const payload = {
   generatedAt: new Date().toISOString(),
   title: result.title,
+  superApp: result.superApp,
   dataset: result.dataset,
   finalStage: result.finalWorkItem.stage,
   architectureBlocks: result.architectureBlocks,
   tools: result.tools,
+  agents: result.agents,
+  superAppModules: result.superAppModules,
   verification: result.verification,
   releaseNote: evidence.release.releaseNote.value,
   stages: Object.entries(evidence).map(([stage, values]) => ({
@@ -32,9 +35,9 @@ const payload = {
   },
   positioning: {
     safe:
-      "Public Google-style engineering sample with typed contracts, MCP-style tools, async worker validation, evaluation gates, and release evidence.",
+      "Public sanitized agentic super-app sample with plugins, skills, explicit permissions, typed contracts, MCP-style tools, async validation, evaluation gates, and release evidence.",
     boundary:
-      "This does not claim direct Google3 access or private Google internal tooling experience.",
+      "This does not expose the private Flion runtime, local vault, credentials, sessions, logs, or unverifiable internal-platform experience.",
   },
 };
 

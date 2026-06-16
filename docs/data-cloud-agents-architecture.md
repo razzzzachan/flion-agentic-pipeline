@@ -1,6 +1,6 @@
-# Flion Data Cloud Agents Architecture
+# Flion Data Cloud Agents Module Architecture
 
-Flion Data Cloud Agents is the next public layer of the Flion portfolio sample: a sanitized, reviewable AI/data engineering monorepo that demonstrates agentic workflows, MCP-style tools, async validation, and evaluation gates.
+Flion Data Cloud Agents is the runnable module inside the public Flion Agentic Super App sample. It remains a sanitized, reviewable AI/data engineering vertical slice that demonstrates agentic workflows, MCP-style tools, async validation, and evaluation gates.
 
 This is a **Google-style engineering sample**, not a claim of direct Google3 access. The goal is to show the public equivalent: explicit contracts, typed boundaries, reproducible checks, monorepo discipline, and careful release handoffs.
 
@@ -12,7 +12,20 @@ This work belongs in the public sanitized repo:
 C:\Portifolio Julio Cesar Betoni\public-repos\flion-agentic-pipeline
 ```
 
-It should not live inside the private OpenClaw/Flion runtime because that workspace contains local state, memory, logs, credentials, and operational context. It also should not live directly in the portfolio app; the portfolio should reference it after the demo is credible.
+It should not live inside the private OpenClaw/Flion runtime because that workspace contains local state, memory, logs, credentials, and operational context. It also should not live directly in the portfolio app; the portfolio should reference the sanitized repo and generated screenshots.
+
+## Relationship To The Super App
+
+The console now presents Flion as a broader agentic workspace:
+
+- Chat command center with `@` plugin/skill mentions and `/` commands.
+- Plugin and skill registry with capability status.
+- Role-agent flow canvas.
+- Browser/computer dock concepts with explicit approval.
+- Automation scheduler concepts with model control.
+- Release desk with evidence and residual risks.
+
+The Data Cloud module proves that the surface is not just a mock UI: it runs a deterministic pipeline with data contracts, tools, a worker, QA checks, and release evidence.
 
 ## Architecture Block Order
 

@@ -1,11 +1,382 @@
 {
-  "generatedAt": "2026-06-16T02:49:44.971Z",
-  "title": "Flion Data Cloud Agents Demo",
+  "generatedAt": "2026-06-16T03:21:12.209Z",
+  "title": "Flion Agentic Super App Demo",
+  "superApp": {
+    "name": "Flion Agentic Super App",
+    "tagline": "A sanitized public workspace for agents, plugins, skills, memory, browser sessions, and release gates.",
+    "summary": "Flion is presented here as a public, sanitized agent workspace. The private runtime has more local state, credentials, logs, and project memory; this demo keeps the product shape while exposing only synthetic data and reviewable code.",
+    "safetyBoundary": "No private vault data, credentials, local sessions, client logs, or unverifiable internal-platform claims are included.",
+    "stats": [
+      {
+        "label": "Native plugins",
+        "value": "21",
+        "detail": "Connector-style integrations surfaced through the UI."
+      },
+      {
+        "label": "Skills indexed",
+        "value": "50+",
+        "detail": "Reusable operating playbooks selectable from the composer."
+      },
+      {
+        "label": "Role agents",
+        "value": "8",
+        "detail": "Specialized agents for scope, design, architecture, build, QA, and release."
+      },
+      {
+        "label": "Release gates",
+        "value": "6",
+        "detail": "Evidence-backed stages before a handoff is marked ready."
+      }
+    ],
+    "modules": [
+      {
+        "id": "agent-chat",
+        "title": "Agent Chat Command Center",
+        "status": "live",
+        "description": "Composer-driven chat with model controls, access policy, context chips, and active plugin or skill mentions.",
+        "signals": [
+          "@ plugin mentions",
+          "/ command palette",
+          "context files",
+          "model selector"
+        ]
+      },
+      {
+        "id": "plugin-skill-registry",
+        "title": "Plugin And Skill Registry",
+        "status": "live",
+        "description": "A searchable runtime catalog that separates available, needs configuration, needs permission, and unavailable capabilities.",
+        "signals": [
+          "21 native plugins",
+          "50+ skills",
+          "status-aware execution",
+          "safe fallbacks"
+        ]
+      },
+      {
+        "id": "flow-canvas",
+        "title": "Agent Flow Canvas",
+        "status": "live",
+        "description": "Visual pipeline for role agents, work items, blocked states, QA loops, and release ownership.",
+        "signals": [
+          "handoff graph",
+          "case focus",
+          "confidence checks",
+          "manual review"
+        ]
+      },
+      {
+        "id": "memory-vault",
+        "title": "Memory Vault Graph",
+        "status": "live",
+        "description": "Operational memory map that rehydrates context from notes, workstreams, and linked decisions without exposing private content.",
+        "signals": [
+          "vault graph",
+          "context notes",
+          "project clusters",
+          "compaction"
+        ]
+      },
+      {
+        "id": "browser-dock",
+        "title": "Browser And Computer Dock",
+        "status": "controlled",
+        "description": "Per-session browser and computer surfaces with approval policies, previews, logs, references, and action history.",
+        "signals": [
+          "preview",
+          "real tab sync",
+          "permission broker",
+          "action audit"
+        ]
+      },
+      {
+        "id": "automation-scheduler",
+        "title": "Automation Scheduler",
+        "status": "live",
+        "description": "Recurring agent runs with model selection, schedules, stale-run repair, and post-run summaries.",
+        "signals": [
+          "scheduled loops",
+          "model per automation",
+          "run now",
+          "status repair"
+        ]
+      },
+      {
+        "id": "connector-authority",
+        "title": "Connector Authority",
+        "status": "guarded",
+        "description": "OAuth, connector requirements, permission grants, and capability routing are explicit runtime objects.",
+        "signals": [
+          "OAuth authority",
+          "permission status",
+          "encrypted vault",
+          "capability broker"
+        ]
+      },
+      {
+        "id": "release-desk",
+        "title": "Release Desk",
+        "status": "ready",
+        "description": "Evidence, tests, residual risks, and deployment notes are packaged before public handoff.",
+        "signals": [
+          "QA gates",
+          "release notes",
+          "risk ledger",
+          "public safety scan"
+        ]
+      }
+    ],
+    "commandPalette": {
+      "triggers": [
+        {
+          "key": "@",
+          "title": "Reference plugins, skills, and files",
+          "description": "The composer opens a searchable palette for plugins, skills, and context files, then renders selected items as inline chips."
+        },
+        {
+          "key": "/",
+          "title": "Run commands and change operating mode",
+          "description": "Slash commands expose actions like compact, fork, create task, create note, change model, and switch personality."
+        },
+        {
+          "key": "+",
+          "title": "Open creation and attachment actions",
+          "description": "The plus menu groups new tasks, notes, files, plugin shortcuts, and session actions without crowding the composer."
+        }
+      ],
+      "examples": [
+        "@browser inspect the current preview",
+        "@github prepare a safe release note",
+        "@ui-ux-pro-max review this workspace layout",
+        "/compact summarize the operational context",
+        "/model gpt-5.2-codex"
+      ]
+    },
+    "catalog": {
+      "plugins": [
+        "browser",
+        "chrome",
+        "computer-use",
+        "github",
+        "gmail",
+        "google-drive",
+        "google-calendar",
+        "vercel",
+        "data-analytics",
+        "documents",
+        "spreadsheets",
+        "presentations",
+        "linear",
+        "openai-developers",
+        "hyperframes",
+        "remotion",
+        "binance",
+        "heygen",
+        "zyka-sdk",
+        "higgsfield",
+        "immoflow-video-remotion"
+      ],
+      "skills": [
+        "ui-ux-pro-max",
+        "21st-registry",
+        "browser-qa",
+        "visual-browser-qa",
+        "frontend-implementation",
+        "frontend-architecture",
+        "release-readiness",
+        "skill-creator",
+        "plugin-creator",
+        "playwright",
+        "openai-docs",
+        "data-analytics",
+        "pdf-workflows",
+        "youtube-researcher"
+      ]
+    },
+    "agents": [
+      {
+        "id": "jarvis-main",
+        "title": "Jarvis Main",
+        "mission": "Keeps the main thread coherent, chooses the next action, and manages active context.",
+        "handoff": "specialist agents",
+        "status": "online"
+      },
+      {
+        "id": "operator",
+        "title": "Opportunity Operator",
+        "mission": "Turns external opportunities into structured applications, blockers, and follow-up loops.",
+        "handoff": "release desk",
+        "status": "active"
+      },
+      {
+        "id": "scope",
+        "title": "Scope Producer",
+        "mission": "Converts ambiguous requests into acceptance criteria, constraints, and product intent.",
+        "handoff": "design",
+        "status": "ready"
+      },
+      {
+        "id": "design",
+        "title": "Solution Designer",
+        "mission": "Shapes UX, flows, and interaction contracts before engineering starts.",
+        "handoff": "architecture",
+        "status": "ready"
+      },
+      {
+        "id": "architecture",
+        "title": "Technical Architect",
+        "mission": "Maps modules, data contracts, tool boundaries, and runtime risks.",
+        "handoff": "implementation",
+        "status": "ready"
+      },
+      {
+        "id": "implementation",
+        "title": "Execution Engineer",
+        "mission": "Builds the agreed slice, keeps diffs focused, and preserves public/private boundaries.",
+        "handoff": "qa",
+        "status": "ready"
+      },
+      {
+        "id": "qa",
+        "title": "Quality Guardian",
+        "mission": "Runs tests, smoke checks, accessibility scans, and evidence validation before release.",
+        "handoff": "release",
+        "status": "ready"
+      },
+      {
+        "id": "release",
+        "title": "Release Manager",
+        "mission": "Packages what changed, what passed, residual risks, and deployment status.",
+        "handoff": "public handoff",
+        "status": "ready"
+      }
+    ],
+    "dock": [
+      {
+        "title": "Preview",
+        "description": "Live browser or static preview tied to the active session."
+      },
+      {
+        "title": "Logs",
+        "description": "Runtime events, tool calls, internal cards, and safety warnings."
+      },
+      {
+        "title": "Execution",
+        "description": "Agent actions, approvals, browser steps, and automation runs."
+      },
+      {
+        "title": "Files",
+        "description": "Context files selected for the current thread or workstream."
+      },
+      {
+        "title": "Details",
+        "description": "Session state, model, access mode, and handoff metadata."
+      }
+    ],
+    "automations": [
+      {
+        "id": "qa-smoke-runner",
+        "title": "QA Smoke Runner",
+        "cadence": "on demand or scheduled",
+        "model": "codex-grade reasoning",
+        "outcome": "Runs validation, collects screenshots, and writes release notes."
+      },
+      {
+        "id": "portfolio-publisher",
+        "title": "Portfolio Publisher",
+        "cadence": "after verified product changes",
+        "model": "fast review",
+        "outcome": "Refreshes public copy, screenshots, and deployment checks."
+      },
+      {
+        "id": "opportunity-scanner",
+        "title": "Opportunity Scanner",
+        "cadence": "every 120 minutes",
+        "model": "strict scorer",
+        "outcome": "Finds one high-fit opportunity, rejects weak matches, and records blockers."
+      }
+    ],
+    "dataCloud": {
+      "title": "Data Cloud Agents Module",
+      "description": "The runnable vertical slice in this repository still proves tool-mediated data work with contracts, safe SQL, workers, QA, and release evidence.",
+      "datasetTitle": "Sanitized Revenue Cloud",
+      "toolCount": 5
+    }
+  },
   "dataset": {
     "id": "demo_revenue_cloud",
+    "title": "Sanitized Revenue Cloud",
+    "description": "Small public fixture for agentic data workflow demonstrations.",
     "tables": [
-      "accounts",
-      "tool_runs"
+      {
+        "name": "accounts",
+        "description": "Sanitized account-level revenue and workflow status.",
+        "tags": [
+          "revenue",
+          "accounts",
+          "workflow"
+        ],
+        "columns": [
+          {
+            "name": "account",
+            "type": "string",
+            "description": "Public sample account label."
+          },
+          {
+            "name": "segment",
+            "type": "string",
+            "description": "Customer segment."
+          },
+          {
+            "name": "arr_usd",
+            "type": "number",
+            "description": "Annual recurring revenue in USD."
+          },
+          {
+            "name": "risk",
+            "type": "string",
+            "description": "Operational risk label."
+          },
+          {
+            "name": "next_action",
+            "type": "string",
+            "description": "Recommended workflow action."
+          }
+        ],
+        "rowCount": 3
+      },
+      {
+        "name": "tool_runs",
+        "description": "Sanitized tool execution summary for agent workflow observability.",
+        "tags": [
+          "tools",
+          "observability",
+          "agents"
+        ],
+        "columns": [
+          {
+            "name": "tool",
+            "type": "string",
+            "description": "Tool name."
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "Execution status."
+          },
+          {
+            "name": "latency_ms",
+            "type": "number",
+            "description": "Observed latency in milliseconds."
+          },
+          {
+            "name": "quality_score",
+            "type": "number",
+            "description": "Simple deterministic quality score."
+          }
+        ],
+        "rowCount": 3
+      }
     ]
   },
   "finalStage": "release",
@@ -73,6 +444,75 @@
       "description": "Wrap stage evidence in a deterministic envelope before it enters the pipeline."
     }
   ],
+  "agents": [
+    {
+      "id": "scope",
+      "title": "Scope Agent",
+      "mission": "Bounds the request to public data and acceptance criteria.",
+      "status": "approved",
+      "handoff": "solution"
+    },
+    {
+      "id": "architect",
+      "title": "Architecture Agent",
+      "mission": "Turns workflow decisions into contracts, tools, workers, and evaluation gates.",
+      "status": "approved",
+      "handoff": "implementation"
+    },
+    {
+      "id": "toolsmith",
+      "title": "Toolsmith Agent",
+      "mission": "Executes validated MCP-style tools and records deterministic artifacts.",
+      "status": "verified",
+      "handoff": "qa"
+    },
+    {
+      "id": "qa",
+      "title": "QA Gate Agent",
+      "mission": "Blocks self-approval by checking SQL, query rows, code generation, and worker execution.",
+      "status": "passed",
+      "handoff": "release"
+    },
+    {
+      "id": "release",
+      "title": "Release Agent",
+      "mission": "Packages evidence, limitations, and public positioning into a reviewable handoff.",
+      "status": "ready",
+      "handoff": "public demo"
+    }
+  ],
+  "superAppModules": [
+    {
+      "id": "home",
+      "title": "Mission Home",
+      "description": "Single cockpit for active work, evidence health, agent state, and release readiness.",
+      "status": "live"
+    },
+    {
+      "id": "agents",
+      "title": "Agent Workspace",
+      "description": "Role-based agents move the same work item through scope, solution, architecture, QA, and release.",
+      "status": "live"
+    },
+    {
+      "id": "tools",
+      "title": "Tool Registry",
+      "description": "MCP-style tools expose safe data operations instead of letting agents improvise against raw systems.",
+      "status": "live"
+    },
+    {
+      "id": "data",
+      "title": "Data Contracts",
+      "description": "Dataset schemas, query limits, and result envelopes are visible before release is allowed.",
+      "status": "live"
+    },
+    {
+      "id": "release",
+      "title": "Release Center",
+      "description": "Evaluation gates package evidence, residual risks, and final handoff state.",
+      "status": "ready"
+    }
+  ],
   "verification": {
     "passed": true,
     "checks": [
@@ -96,10 +536,11 @@
   },
   "releaseNote": {
     "ready": true,
-    "summary": "Data Cloud Agents demo completed with public data, safe tools, worker validation, and release evidence.",
+    "summary": "Flion Super App demo completed with public data, safe tools, worker validation, and release evidence.",
     "residualRisks": [
       "This is an in-memory demo; production deployment would need persistent queues and auth.",
-      "The SQL validator intentionally supports a small safe subset."
+      "The SQL validator intentionally supports a small safe subset.",
+      "The visible console is sanitized and does not expose private Flion runtime state."
     ]
   },
   "stages": [
@@ -108,42 +549,42 @@
       "evidenceKeys": [
         "acceptanceCriteria"
       ],
-      "recordedAt": "2026-06-16T02:49:44.968Z"
+      "recordedAt": "2026-06-16T03:21:12.205Z"
     },
     {
       "stage": "solution",
       "evidenceKeys": [
         "workflowDecision"
       ],
-      "recordedAt": "2026-06-16T02:49:44.968Z"
+      "recordedAt": "2026-06-16T03:21:12.205Z"
     },
     {
       "stage": "architecture",
       "evidenceKeys": [
         "technicalContract"
       ],
-      "recordedAt": "2026-06-16T02:49:44.968Z"
+      "recordedAt": "2026-06-16T03:21:12.205Z"
     },
     {
       "stage": "implementation",
       "evidenceKeys": [
         "implementationArtifact"
       ],
-      "recordedAt": "2026-06-16T02:49:44.970Z"
+      "recordedAt": "2026-06-16T03:21:12.207Z"
     },
     {
       "stage": "qa",
       "evidenceKeys": [
         "verificationResult"
       ],
-      "recordedAt": "2026-06-16T02:49:44.970Z"
+      "recordedAt": "2026-06-16T03:21:12.208Z"
     },
     {
       "stage": "release",
       "evidenceKeys": [
         "releaseNote"
       ],
-      "recordedAt": "2026-06-16T02:49:44.971Z"
+      "recordedAt": "2026-06-16T03:21:12.208Z"
     }
   ],
   "implementation": {
@@ -167,7 +608,7 @@
     ],
     "workerJobs": [
       {
-        "id": "job_mqg1nhft_fmkk16",
+        "id": "job_mqg2rxn3_0zsaf0",
         "type": "validate_sql",
         "status": "succeeded",
         "ok": true
@@ -175,7 +616,7 @@
     ]
   },
   "positioning": {
-    "safe": "Public Google-style engineering sample with typed contracts, MCP-style tools, async worker validation, evaluation gates, and release evidence.",
-    "boundary": "This does not claim direct Google3 access or private Google internal tooling experience."
+    "safe": "Public sanitized agentic super-app sample with plugins, skills, explicit permissions, typed contracts, MCP-style tools, async validation, evaluation gates, and release evidence.",
+    "boundary": "This does not expose the private Flion runtime, local vault, credentials, sessions, logs, or unverifiable internal-platform experience."
   }
 }

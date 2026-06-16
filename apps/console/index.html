@@ -3,158 +3,241 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Flion Data Cloud Agents Console</title>
+    <title>Flion Agentic Super App Console</title>
     <meta
       name="description"
-      content="Public operator console for the Flion Data Cloud Agents demo."
+      content="Public sanitized console for the Flion agentic super app: chat, plugins, skills, automations, memory, browser sessions, and release gates."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to console</a>
+    <a class="skip-link" href="#main">Skip to Flion console</a>
+    <div class="ambient" aria-hidden="true"></div>
 
-    <div class="ambient-grid" aria-hidden="true"></div>
-
-    <header class="shell-header" aria-label="Flion console header">
-      <div>
-        <p class="eyebrow">Public sanitized demo</p>
-        <h1>Flion Data Cloud Agents</h1>
-      </div>
-      <div class="header-actions" aria-label="Demo commands">
-        <code>npm run validate</code>
-        <span class="status-pill" data-status="ready">Release ready</span>
-      </div>
-    </header>
-
-    <main id="main" class="console-shell">
-      <section class="hero-panel reveal" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Agentic data workflow console</p>
-          <h2 id="hero-title">Contracts before tools. Evidence before release.</h2>
-          <p>
-            A public Google-style engineering sample for AI/data roles: typed contracts,
-            MCP-style tools, async validation, evaluation gates, and a release handoff that
-            refuses to approve itself.
-          </p>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Workspace navigation">
+        <div class="brand-lockup">
+          <span class="brand-mark"></span>
+          <div>
+            <strong>Flion</strong>
+            <small>Agent workspace</small>
+          </div>
         </div>
-        <div class="hero-circuit" aria-label="Pipeline state">
-          <div class="circuit-node is-active">Scope</div>
-          <div class="circuit-line"></div>
-          <div class="circuit-node is-active">Tools</div>
-          <div class="circuit-line"></div>
-          <div class="circuit-node is-active">QA</div>
-          <div class="circuit-line"></div>
-          <div class="circuit-node is-active">Release</div>
-        </div>
-      </section>
 
-      <section class="metric-grid reveal" aria-label="Demo metrics">
-        <article class="metric-card">
-          <span>Final stage</span>
-          <strong data-bind="finalStage">release</strong>
-          <small>Validated by Flion handoff gates</small>
-        </article>
-        <article class="metric-card">
-          <span>QA checks</span>
-          <strong data-bind="checksPassed">4/4</strong>
-          <small>SQL, query, sample code, worker</small>
-        </article>
-        <article class="metric-card">
-          <span>Tool registry</span>
-          <strong data-bind="toolCount">5</strong>
-          <small>MCP-style public tools</small>
-        </article>
-        <article class="metric-card accent-card">
-          <span>Boundary</span>
-          <strong>safe</strong>
-          <small>No private runtime or Google3 claim</small>
-        </article>
-      </section>
+        <nav class="nav-list" aria-label="Primary modules">
+          <a href="#workspace" class="is-active">Home</a>
+          <a href="#palette">Command palette</a>
+          <a href="#registry">Plugins & skills</a>
+          <a href="#canvas">Flow canvas</a>
+          <a href="#release">Release desk</a>
+        </nav>
 
-      <section class="dashboard-grid">
-        <aside class="panel architecture-panel reveal" aria-labelledby="architecture-title">
-          <div class="panel-heading">
-            <p class="eyebrow">Architecture sequence</p>
-            <h2 id="architecture-title">Block order</h2>
+        <section class="sidebar-card">
+          <p class="eyebrow">Access policy</p>
+          <strong>Full access, explicit approval</strong>
+          <span>Browser, computer, connectors, and automations are routed through visible permission states.</span>
+        </section>
+
+        <section class="sidebar-card compact">
+          <p class="eyebrow">Public boundary</p>
+          <span data-bind="safetyBoundary">No private runtime state is exposed.</span>
+        </section>
+      </aside>
+
+      <main id="main" class="workspace">
+        <header class="topbar" aria-label="Console status">
+          <div>
+            <p class="eyebrow">Public sanitized demo</p>
+            <h1 data-bind="title">Flion Agentic Super App</h1>
           </div>
-          <ol class="block-list" data-render="architecture"></ol>
-        </aside>
+          <div class="topbar-actions">
+            <code data-bind="generatedAt">generated locally</code>
+            <span class="status-pill">Release ready</span>
+          </div>
+        </header>
 
-        <section class="panel release-panel reveal" aria-labelledby="release-title">
-          <div class="panel-heading row-heading">
-            <div>
-              <p class="eyebrow">Release handoff</p>
-              <h2 id="release-title">Ready with residual risks</h2>
+        <section id="workspace" class="hero-grid">
+          <article class="panel chat-panel reveal" aria-labelledby="chat-title">
+            <div class="panel-heading row">
+              <div>
+                <p class="eyebrow">Jarvis Main</p>
+                <h2 id="chat-title">Chat where tools become first-class context</h2>
+              </div>
+              <span class="mini-pill">gpt-5.2-codex</span>
             </div>
-            <span class="status-pill" data-status="verified">Verified</span>
-          </div>
-          <p class="release-summary" data-bind="releaseSummary">
-            Data Cloud Agents demo completed with public data, safe tools, worker validation,
-            and release evidence.
-          </p>
-          <div class="risk-stack" data-render="risks"></div>
-        </section>
 
-        <section class="panel timeline-panel reveal" aria-labelledby="timeline-title">
-          <div class="panel-heading">
-            <p class="eyebrow">Evidence trail</p>
-            <h2 id="timeline-title">Stage handoffs</h2>
-          </div>
-          <div class="timeline" data-render="stages"></div>
-        </section>
+            <p class="lead" data-bind="summary">
+              A public, sanitized agent workspace for plugins, skills, memory, browser sessions, and release gates.
+            </p>
 
-        <section class="panel data-panel reveal" aria-labelledby="data-title">
-          <div class="panel-heading row-heading">
-            <div>
-              <p class="eyebrow">Validated query</p>
-              <h2 id="data-title">Sanitized dataset result</h2>
+            <div class="message-stack">
+              <div class="message operator">
+                <span>You</span>
+                <p>
+                  Use <strong>@browser</strong>, <strong>@github</strong>, and
+                  <strong>@ui-ux-pro-max</strong> to review the release and update the portfolio.
+                </p>
+              </div>
+              <div class="message agent">
+                <span>Flion</span>
+                <p>
+                  Active prompt context includes referenced plugins, selected skills, files, access
+                  policy, model, and release evidence before execution starts.
+                </p>
+              </div>
             </div>
-            <code data-bind="sql">SELECT account, arr_usd, risk FROM accounts LIMIT 3</code>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Account</th>
-                  <th>ARR USD</th>
-                  <th>Risk</th>
-                </tr>
-              </thead>
-              <tbody data-render="queryRows"></tbody>
-            </table>
-          </div>
+
+            <div class="composer-mock" aria-label="Composer mock">
+              <button type="button">+</button>
+              <div class="composer-input">
+                <span class="mention">@browser</span>
+                <span class="mention">@github</span>
+                <span class="mention">@ui-ux-pro-max</span>
+                <span class="ghost">/compact release context...</span>
+              </div>
+              <button type="button" class="send-button">Send</button>
+            </div>
+          </article>
+
+          <aside class="panel dock-panel reveal" aria-labelledby="dock-title">
+            <div class="panel-heading">
+              <p class="eyebrow">Right dock</p>
+              <h2 id="dock-title">Preview, logs, execution, files, details</h2>
+            </div>
+            <div class="dock-tabs" data-render="dock"></div>
+          </aside>
         </section>
 
-        <section class="panel tools-panel reveal" aria-labelledby="tools-title">
-          <div class="panel-heading">
-            <p class="eyebrow">MCP-style registry</p>
-            <h2 id="tools-title">Safe public tools</h2>
-          </div>
-          <div class="tool-grid" data-render="tools"></div>
+        <section class="stat-grid reveal" aria-label="Product metrics" data-render="stats"></section>
+
+        <section id="palette" class="split-grid">
+          <article class="panel palette-panel reveal">
+            <div class="panel-heading row">
+              <div>
+                <p class="eyebrow">Command palette</p>
+                <h2>@ mentions and / commands</h2>
+              </div>
+              <span class="mini-pill">keyboard first</span>
+            </div>
+            <div class="search-mock">
+              <span>@</span>
+              <strong>Search plugins, skills, files, commands, models...</strong>
+            </div>
+            <div class="palette-grid" data-render="palette"></div>
+          </article>
+
+          <article id="registry" class="panel registry-panel reveal">
+            <div class="panel-heading">
+              <p class="eyebrow">Native runtime catalog</p>
+              <h2>Plugins and skills from the UI</h2>
+            </div>
+            <div class="registry-columns">
+              <div>
+                <h3>Plugins</h3>
+                <div class="chip-cloud" data-render="plugins"></div>
+              </div>
+              <div>
+                <h3>Skills</h3>
+                <div class="chip-cloud" data-render="skills"></div>
+              </div>
+            </div>
+          </article>
         </section>
 
-        <section class="panel positioning-panel reveal" aria-labelledby="positioning-title">
+        <section id="canvas" class="dashboard-grid">
+          <article class="panel modules-panel reveal">
+            <div class="panel-heading">
+              <p class="eyebrow">Super app modules</p>
+              <h2>Current product surface</h2>
+            </div>
+            <div class="module-grid" data-render="modules"></div>
+          </article>
+
+          <article class="panel agents-panel reveal">
+            <div class="panel-heading">
+              <p class="eyebrow">Agent flow canvas</p>
+              <h2>Role agents and handoffs</h2>
+            </div>
+            <div class="agent-flow" data-render="agents"></div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel automations-panel reveal">
+            <div class="panel-heading">
+              <p class="eyebrow">Automations</p>
+              <h2>Scheduled loops with model control</h2>
+            </div>
+            <div class="automation-list" data-render="automations"></div>
+          </article>
+
+          <article id="release" class="panel release-panel reveal">
+            <div class="panel-heading row">
+              <div>
+                <p class="eyebrow">Release desk</p>
+                <h2>Evidence before public handoff</h2>
+              </div>
+              <span class="status-pill">Verified</span>
+            </div>
+            <p class="lead" data-bind="releaseSummary">
+              Flion Super App demo completed with public data, safe tools, worker validation, and release evidence.
+            </p>
+            <div class="risk-stack" data-render="risks"></div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel data-panel reveal">
+            <div class="panel-heading row">
+              <div>
+                <p class="eyebrow">Data Cloud module</p>
+                <h2>Runnable vertical slice</h2>
+              </div>
+              <code data-bind="sql">SELECT account, arr_usd, risk FROM accounts LIMIT 3</code>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Account</th>
+                    <th>ARR USD</th>
+                    <th>Risk</th>
+                  </tr>
+                </thead>
+                <tbody data-render="queryRows"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel architecture-panel reveal">
+            <div class="panel-heading">
+              <p class="eyebrow">Architecture gates</p>
+              <h2>Contracts before tools, tools before release</h2>
+            </div>
+            <ol class="architecture-list" data-render="architecture"></ol>
+          </article>
+        </section>
+
+        <section class="panel positioning-panel reveal">
           <div class="panel-heading">
-            <p class="eyebrow">Braintrust positioning</p>
-            <h2 id="positioning-title">Honest Google-style claim</h2>
+            <p class="eyebrow">Public positioning</p>
+            <h2>Honest scope</h2>
           </div>
           <blockquote data-bind="safePositioning">
-            Public Google-style engineering sample with typed contracts, MCP-style tools,
-            async worker validation, evaluation gates, and release evidence.
+            Public sanitized agentic super-app sample with plugins, skills, explicit permissions, typed contracts, MCP-style tools, async validation, evaluation gates, and release evidence.
           </blockquote>
           <p data-bind="boundaryPositioning">
-            This does not claim direct Google3 access or private Google internal tooling
-            experience.
+            This does not expose the private Flion runtime, local vault, credentials, sessions, logs, or unverifiable internal-platform experience.
           </p>
         </section>
-      </section>
-    </main>
+      </main>
+    </div>
 
     <script type="module" src="./app.js"></script>
   </body>
